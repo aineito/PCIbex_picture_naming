@@ -51,10 +51,12 @@ PennController("instructions",
      .print()
      ,
   newImage("eg_pic1","watch.jpg")
+    .settings.center()
     .print()
     ,
   newText("eg_pic1_name","watch")
-    .settings.css("font-size", "20px")
+    .settings.center()
+    .settings.css("font-size", "30px")
     .print()
     ,
   newCanvas("empty canvas", 1, 10) // add some space
@@ -95,6 +97,9 @@ PennController("picture_naming",
       .lines(1)
       .size(300, 30)
       ,
+  newCanvas("empty canvas", 1, 10) // add some space
+     .print()
+     ,
   newVar("response")
        .set(getTextInput("response_input"))
        .global()
